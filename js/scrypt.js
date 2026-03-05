@@ -37,13 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Gestionare Formular (Demo)
-    const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Vă mulțumim! Mesajul a fost trimis. Un reprezentant MetalStruct Pro vă va contacta în curând.');
-            contactForm.reset();
-        });
-    }
 });
