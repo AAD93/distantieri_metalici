@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                // Calculăm poziția ținând cont de header-ul fix (80px)
-                const headerOffset = 80;
+                // Calculăm poziția ținând cont de header-ul fix (90px)
+                const headerOffset = 90;
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     
