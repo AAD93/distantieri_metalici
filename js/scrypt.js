@@ -47,7 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('appear');
+                // Folosim setTimeout pentru a respecta delay-ul din CSS
+                const delay = parseFloat(entry.target.style.animationDelay) * 1000 || 0;
+                setTimeout(() => {
+                    entry.target.classList.add('appear');
+                }, delay);
+
                 observer.unobserve(entry.target); // Animăm o singură dată
             }
         });
